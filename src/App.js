@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
-
-import NavBar from './components/Nav';
+import Nav from './components/Nav';
 
 import './App.css';
 
@@ -10,6 +9,7 @@ class App extends Component {
 
       <div className="App">
         <h1>Hello World</h1>
+        <Nav />
       </div>
     );
   }
