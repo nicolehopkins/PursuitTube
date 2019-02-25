@@ -21,18 +21,22 @@ class Nav extends Component {
           </ul> */}
           
     
-          <div class="topnav">
-          <img src="/images/pursuit_logo.jpg" alt="Pursuit Logo" width='42' height='42'></img>
-          <li>Pursuit Tube</li>
-          <li><Link to={'/'} className="nav-link"> HomeLink </Link></li>
-            <li><Link to={'/userlink'} className="nav-link">UserLink</Link></li>
-            <li><Link to={'/feedEditorLink'} className="nav-link">FeedEditorLink</Link></li>
-  <div class="search-container">
-   
-      <input type="text" placeholder="Search.." name="search"/>
-      <button type="submit">Submit</button>
-  </div>
-</div>
+        <div className="topnav">
+        <div className='link-container'>
+            <img src="/images/pursuit_logo.jpg" alt="Pursuit Logo" width='42' height='42'></img>
+            <li>Pursuit Tube</li>
+            <ul>
+                <li><Link to={'/'} className="nav-link"> HomeLink </Link></li>
+                <li><Link to={'/userlink'} className="nav-link">UserLink</Link></li>
+                <li><Link to={'/feedEditorLink'} className="nav-link">FeedEditorLink</Link></li>
+            </ul>
+            </div>
+            <div className="search-container">
+                <input type="text" placeholder="Search.." name="search"/>
+                <button type="submit">Submit</button>
+            </div>
+        </div>
+         
          
           {/* <hr /> */}
     
