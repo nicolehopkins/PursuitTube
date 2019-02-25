@@ -15,6 +15,6 @@ YouTube Data API (https://developers.google.com/youtube/v3/getting-started#quota
 https://github.com/nicolehopkins/PursuitTube/projects/2 <br/>
 
 ### `Planning Stage` ###
-<img src='./images/Layout_1.jpg'>
-<img src='./images/Layout.jpg'>
+<img src='/public/images/Layout_1.jpg'>
+<img src='/public/images/Layout.jpg'>
 
