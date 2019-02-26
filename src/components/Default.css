@@ -1,0 +1,29 @@
+.user-container {
+    width: 75%;
+    height: 125px;
+    background-color: #EAECEF;
+    margin-left: 10%;
+    margin-right: 10%;
+    position: relative;
+}
+  
+.user-name {
+    padding: 5%;
+}
+  
+.video-container {
+    display: inline-flex;
+    margin-left: 10%;
+}
+  
+.video-list {
+    margin-left: 100px;
+}
+  
+.feed-name {
+    padding: 7%;
+    width: 200px;
+    border-style: solid;
+    border-color: #EAECEF;
+    border-width: 1px;
+}
