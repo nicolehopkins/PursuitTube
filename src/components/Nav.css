@@ -2,12 +2,16 @@ ul {
     list-style-type: none;
     margin: 0;
     padding: 0;
+    color: grey;
   }
 
   li {
     display: inline;
     /* display: block; */
     padding: 8px;
+    /* color: #1a0dab; */
+    text-decoration: none;
+
     
   }
 
@@ -26,23 +30,33 @@ input {
     font-size: 17px;
     border: none;
     cursor: pointer;    
+    -webkit-border-radius: 50px;
+    -moz-border-radius: 50px;
+    border-radius: 50px;
+    outline:none;
+
 }
 
-button {
-    /* float:right; */
-}
+
 
 .topnav {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    border-bottom: 1px solid black;
+    border: 1px solid black;
+    /* border-bottom: 1px solid black; */
     padding: 10px;
+    overflow: hidden;
+    background-color: rgba(0,0,0,.65)
 }
 
 .link-container {
     display: flex;
     align-items: center;
 }
+
+
+
+li:hover {font-size:150%; color: black;}
 
 
