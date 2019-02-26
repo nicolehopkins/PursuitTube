@@ -1,13 +1,13 @@
 import React, { Component } from 'react'
 import {
-    Card, CardImg, CardText, CardBody,
-    CardTitle, CardSubtitle, Button, CardDeck
+    Card, CardImg, CardBody,
+    CardTitle, CardSubtitle, CardDeck
 } from 'reactstrap';
+import './HomeCard.css'
 
 class HomeCard extends Component {
 
     render() {
-
         return (
             <>
                 <div className='container col-12'>
@@ -18,44 +18,47 @@ class HomeCard extends Component {
                             <Card> 
                                 <CardImg top width="100%" src="https://placeholdit.imgix.net/~text?txtsize=33&txt=256%C3%97180&w=256&h=180" alt="Card image cap" />
                                 <CardBody>
-                                    <CardTitle>Card title</CardTitle>
-                                    <CardSubtitle>Card subtitle</CardSubtitle>
-                                    <CardText>This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</CardText>
-                                    <Button>Show More</Button>
+                                    <CardTitle className='vTitle'>Title of the Video</CardTitle>
+                                    <CardSubtitle className ='desc'>Channel Name</CardSubtitle>
+                                    <CardSubtitle className='desc'>Uploaded Time</CardSubtitle>
                                 </CardBody>
                             </Card>
                             {/* Single Card End */}
+                            {/* Single Card Start */}
                             <Card>
                                 <CardImg top width="100%" src="https://placeholdit.imgix.net/~text?txtsize=33&txt=256%C3%97180&w=256&h=180" alt="Card image cap" />
                                 <CardBody>
-                                    <CardTitle>Card title</CardTitle>
-                                    <CardSubtitle>Card subtitle</CardSubtitle>
-                                    <CardText>This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</CardText>
-                                    <Button>Show More</Button>
+                                    <CardTitle className='vTitle'>Title of the Video</CardTitle>
+                                    <CardSubtitle className='desc'>Channel Name</CardSubtitle>
+                                    <CardSubtitle className='desc'>Uploaded Time</CardSubtitle>
                                 </CardBody>
                             </Card>
+                            {/* Single Card End */}
+                            {/* Single Card Start */}
                             <Card>
                                 <CardImg top width="100%" src="https://placeholdit.imgix.net/~text?txtsize=33&txt=256%C3%97180&w=256&h=180" alt="Card image cap" />
                                 <CardBody>
-                                    <CardTitle>Card title</CardTitle>
-                                    <CardSubtitle>Card subtitle</CardSubtitle>
-                                    <CardText>This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</CardText>
-                                    <Button>Show More</Button>
+                                    <CardTitle className='vTitle'>Title of the Video</CardTitle>
+                                    <CardSubtitle className='desc'>Channel Name</CardSubtitle>
+                                    <CardSubtitle className='desc'>Uploaded Time</CardSubtitle>
                                 </CardBody>
                             </Card>
+                            {/* Single Card End */}
+                            {/* Single Card Start */}
                             <Card>
                                 <CardImg top width="100%" src="https://placeholdit.imgix.net/~text?txtsize=33&txt=256%C3%97180&w=256&h=180" alt="Card image cap" />
                                 <CardBody>
-                                    <CardTitle>Card title</CardTitle>
-                                    <CardSubtitle>Card subtitle</CardSubtitle>
-                                    <CardText>This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</CardText>
-                                    <Button>Show More</Button>
+                                    <CardTitle className='vTitle'>Title of the Video</CardTitle>
+                                    <CardSubtitle className='desc'>Channel Name</CardSubtitle>
+                                    <CardSubtitle className='desc'>Uploaded Time</CardSubtitle>
                                 </CardBody>
                             </Card>
+                            {/* Single Card End */}
                         </CardDeck>
                     </div>
                     {/* Single Row End */}
                 </div>
+                
             </>
         )
     }
