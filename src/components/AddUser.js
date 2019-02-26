@@ -27,7 +27,7 @@ class Users extends React.Component {
           The username you entered ahs already been added, Please add a new name !
         </Alert>
         <input type="text" /> 
-        <button onClick={this.checkListOfUsers}></button>
+        <button onClick={this.addUser}>add</button>
       </>
     );
   }
