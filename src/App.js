@@ -1,16 +1,14 @@
 import React, { Component } from 'react';
-
+import Nav from './components/Nav';
 import './App.css';
 import HomeCard from './components/HomeCard';
 
 class App extends Component {
-  render() {    
+  
+  render() {
     return (
-      <>
-        <h1>Hello World!</h1>
-        <HomeCard />
-     </>
-    )
+        <Nav />
+    );
   }
 }
 
