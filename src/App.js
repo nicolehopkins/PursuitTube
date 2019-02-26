@@ -1,17 +1,19 @@
 import React, { Component } from 'react';
-
-
-
 import './App.css';
+import Users from './components/AddUser';
+import { Alert } from "reactstrap";
+
+
 
 class App extends Component {
   render() {
     return (
 
-      <div className="App">
-        <h1>hello world!</h1>
-
-      </div>
+      <>
+      <h1>Hello World</h1>
+      <Users />
+      
+      </>
     );
   }
 }

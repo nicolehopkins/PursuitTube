@@ -1,30 +1,36 @@
-import React from 'react';
+import React from "react";
+import { Alert } from "reactstrap";
 
-class Users extends React.Component{
-    constructor(props){
-        super(props);
-        this.state={
-            userName:['vicky','eddie','nicole','steph'],
-            newUserName : newUserName,
-        }
+class Users extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      userName: ["default", "vicky", "eddie", "nicole", "steph"],
+      newUserName: "",
+      alert: false
+    };
+  }
+  addUser = e => {
+    if (this.newUserName === this.userName) {
+      this.setState({ alert: true });
+    } else {
+      this.setState({ alert: false });
     }
-    addUser =(e)=>{
-        if (this.newUserName===this.userName){
-            <alert>this name has already been added</alert>
-        console.log(addUser)
-    }
-    listOfUsers=(e)=>{
-        
-    }
+  };
 
-    render(){
-        return(
-            <>
-            <input type="text"></input>
-            </>
-        )
-    }
-    
+  checkListOfUsers = e => {};
+
+  render() {
+    return (
+      <>
+        <Alert color="danger" isOpen={this.state.alert} toggle={this.alert}>
+          The username you entered ahs already been added, Please add a new name !
+        </Alert>
+        <input type="text" /> 
+        <button onClick={this.checkListOfUsers}></button>
+      </>
+    );
+  }
 }
 
 export default Users;
