@@ -21,11 +21,9 @@ class Users extends React.Component {
   checkListOfUsers = e => {};
 
   render() {
+    //  const alert=()= this.addUser
     return (
       <>
-        <Alert color="danger" isOpen={this.state.alert} toggle={this.alert}>
-          The username you entered ahs already been added, Please add a new name !
-        </Alert>
         <input type="text" /> 
         <button onClick={this.addUser}>add</button>
       </>
