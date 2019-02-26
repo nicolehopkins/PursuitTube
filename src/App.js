@@ -1,17 +1,17 @@
 import React, { Component } from 'react';
+import HomeCard from './components/HomeCard'
 
-import NavBar from './components/Nav';
 
 import './App.css';
 
 class App extends Component {
-  render() {
+  render() {    
     return (
-
-      <div className="App">
-        <h1>Hello World</h1>
-      </div>
-    );
+      <>
+        <h1>Hello World!</h1>   
+        <HomeCard />
+     </>
+    )
   }
 }
 
