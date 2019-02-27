@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import './Default.css';
 import Axios from 'axios';
+import HomeCard from './HomeCard'
 
 class Default extends Component {
     constructor(props) {
@@ -72,6 +73,7 @@ class Default extends Component {
             <div>
             <div className='video-list'>
               <h4>{this.state.channel}</h4>
+              <HomeCard />
               <button className='show-more-button'>Show More</button>
             </div>
             <div className='video-list'>

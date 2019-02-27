@@ -7,3 +7,19 @@
     font-weight: 650;
     font-size: 20px;
 }
+
+.cardCol {
+    width: 23%;
+    padding: 1%;
+}
+
+.rowL {
+    width: 100%;
+
+}
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%
+}
