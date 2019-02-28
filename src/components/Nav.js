@@ -16,7 +16,7 @@ class Nav extends Component {
 
                     <div className="topnav">
                         <div className='link-container'>
-                            <img src="/images/pursuit_logo.jpg" alt="Pursuit Logo" width='42' height='42'></img>
+                            <img src="/images/pursuit_logo.jpg" className= "nav-img" alt="Pursuit Logo" width='42' height='42'></img>
                             <li>Pursuit Tube</li>
                             <ul>
                                 <li><Link to={'/'} className="nav-link"> HomeLink </Link></li>
