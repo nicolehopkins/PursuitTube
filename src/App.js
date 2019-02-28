@@ -6,10 +6,10 @@ import Nav from './components/Nav';
 import Default from './components/Default';
 import HomeCard from './components/HomeCard';
 
+
 class App extends Component {
   
   render() {
-    
     return ( 
       <>
         <div>     

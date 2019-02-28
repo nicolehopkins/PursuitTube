@@ -4,6 +4,7 @@ import HomeLink from './HomeLink';
 import UserLink from './UserLink';
 import FeedEditorLink from './FeedEditorLink';
 import './Nav.css';
+import Search from './Search'
 
 class Nav extends Component {
     render() {
@@ -23,10 +24,7 @@ class Nav extends Component {
                                 <li><Link to={'/feedEditorLink'} className="nav-link">FeedEditorLink</Link></li>
                             </ul>
                         </div>
-                        <div className="search-container">
-                            <input type="text" placeholder="Search.." name="search" />
-                            <button type="submit">Submit</button>
-                        </div>
+                    <Search />
                     </div>
 
 
