@@ -16,7 +16,8 @@ class Nav extends Component {
                             <img src="/images/pursuit_logo.jpg" alt="Pursuit Logo" width='42' height='42'></img>
                             <li>Pursuit Tube</li>
                             <ul>
-                                <li><Link to={'/'} className="nav-link">Home</Link></li>
+                                <li><Link to={'/'} className="nav-link">Home</Link></li> 
+                                {/* removed homelink */}
                                 <li><Link to={'/userlink'} className="nav-link">User</Link></li>
                                 <li><Link to={'/feedEditorLink'} className="nav-link">FeedEditor</Link></li>
                             </ul>
