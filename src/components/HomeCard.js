@@ -17,9 +17,9 @@ const HomeCard = (props) => {
                             <Card className='cardCol'> 
                                 <CardImg top width="100%" src={props.img} alt="Card image cap" />
                                 <CardBody>
-                                    <CardTitle className='vTitle'>Title of the Video</CardTitle>
-                                    <CardSubtitle className ='desc'>Channel Name</CardSubtitle>
-                                    <CardSubtitle className='desc'>Uploaded Time</CardSubtitle>
+                                    <CardTitle className='vTitle'>{props.vtitle}</CardTitle>
+                                    <CardSubtitle className ='desc'>{props.chanName}</CardSubtitle>
+                                    <CardSubtitle className='desc'>{props.desc}</CardSubtitle>
                                 </CardBody>
                             </Card>
                             {/* Single Card End */}

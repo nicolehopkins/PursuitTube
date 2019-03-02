@@ -92,12 +92,62 @@ class Default extends Component {
                     videos: videoArr,
                     showMoreCount: this.state.feed.showMoreCount + 1,
             });
+            console.log('Thumbnails',this.getThumbnails())
+          console.log('Desc', this.getDesc())
+          console.log('Title', this.getTitle())
+          console.log('Channel', this.getChanName())
+          console.log('Channel', this.getTime())
             console.log('new state: ', this.state)
+            
         })
         .catch(err => {
             console.log(err)
         })
     }
+
+    getThumbnails = () => {
+      let videoArr = this.state.videos
+      videoArr.map((e,i) => {
+        console.log('e', e.snippet.thumbnails.high.url, i)
+      })
+    } 
+
+  getTitle = () => {
+    let videoArr = this.state.videos
+    videoArr.map((e, i) => {
+      console.log('e', e.snippet.title, i)
+    })
+  }
+
+    getDesc = () => {
+      let videoArr = this.state.videos
+      videoArr.map((e, i) => {
+        console.log('e', e.snippet.description, i)
+      })
+    }
+
+  getChanName = () => {
+    let videoArr = this.state.videos
+    videoArr.map((e, i) => {
+      console.log('e', e.snippet.channelTitle, i)
+    })
+  }
+
+  getTime = () => {
+    let videoArr = this.state.videos
+    videoArr.map((e, i) => {
+      console.log('e', e.snippet.publishedAt, i)
+    })
+  }
+
+  buildHomeCard = () => {
+    return (
+      <>
+      <HomeCard img={this.getThumbnails} vtitle={this.getTitle} chanName={this.getChanName} desc={this.getDesc} />
+      </>
+    )
+  }
+    
   
     render() {
   
@@ -115,17 +165,17 @@ class Default extends Component {
               <div>
               <div className='video-list'>
                 <h4>{this.state.search}</h4>
-                <HomeCard img={this.state.img}/>
+                    <div>{this.buildHomeCard}</div>
                 <ShowMore showMoreVideos={this.showMoreVideos}/>
               </div>
               <div className='video-list'>
                 <h4>ESPN Videos</h4>
-                <HomeCard />
+                {/* <HomeCard /> */}
                 <ShowMore showMoreVideos={this.showMoreVideos}/>
               </div>
               <div className='video-list'>
                 <h4>Comedy Videos</h4>
-                <HomeCard />
+                {/* <HomeCard /> */}
                 <ShowMore showMoreVideos={this.showMoreVideos}/>
               </div>
               </div>
