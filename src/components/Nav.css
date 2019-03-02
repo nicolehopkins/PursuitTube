@@ -15,7 +15,7 @@ ul {
     
   }
 
-  img { 
+  .imgLogo { 
     display: inline-block;
     padding-left: 20px;
   }

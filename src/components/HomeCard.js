@@ -5,9 +5,8 @@ import {
 } from 'reactstrap';
 import './HomeCard.css'
 
-class HomeCard extends Component {
+const HomeCard = (props) => {
 
-    render() {
         return (
             <>
                 <Container  xs="12">
@@ -16,7 +15,7 @@ class HomeCard extends Component {
                         <CardDeck className="container">
                             {/* Single Card Start */}
                             <Card className='cardCol'> 
-                                <CardImg top width="100%" src="https://placeholdit.imgix.net/~text?txtsize=33&txt=256%C3%97180&w=256&h=180" alt="Card image cap" />
+                                <CardImg top width="100%" src={props.img} alt="Card image cap" />
                                 <CardBody>
                                     <CardTitle className='vTitle'>Title of the Video</CardTitle>
                                     <CardSubtitle className ='desc'>Channel Name</CardSubtitle>
@@ -61,7 +60,6 @@ class HomeCard extends Component {
                 
             </>
         )
-    }
 }
 
 export default HomeCard

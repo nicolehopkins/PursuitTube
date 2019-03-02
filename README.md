@@ -12,9 +12,11 @@ Heriberto Uroza [Github](https://github.com/HeribertoUroza). <br/>
 
 ### `Resources` ###
 YouTube Data API (https://developers.google.com/youtube/v3/getting-started#quota) <br/>
-https://github.com/nicolehopkins/PursuitTube/projects/2 <br/>
+Github Projects (https://github.com/nicolehopkins/PursuitTube/projects/2) <br/>
 
 ### `Planning Stage` ###
 <img src='/public/images/Layout_1.jpg'>
 <img src='/public/images/Layout.jpg'>
 
+### `Thursday Tasks` ###
+<img src='/public/images/Thursday_Tasks.jpg'>

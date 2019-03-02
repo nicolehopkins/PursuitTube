@@ -10,6 +10,7 @@
 
 .cardCol {
     width: 23%;
+    min-width: 175px;
     padding: 1%;
 }
 

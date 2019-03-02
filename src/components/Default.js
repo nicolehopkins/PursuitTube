@@ -15,6 +15,7 @@ class Default extends Component {
             videos: [],
             showMoreCount: 1,
         },
+        img: "https://i.ytimg.com/vi/Wsfia2SmqQM/hqdefault.jpg"
     }
     }
   
@@ -114,7 +115,7 @@ class Default extends Component {
               <div>
               <div className='video-list'>
                 <h4>{this.state.search}</h4>
-                <HomeCard />
+                <HomeCard img={this.state.img}/>
                 <ShowMore showMoreVideos={this.showMoreVideos}/>
               </div>
               <div className='video-list'>
