@@ -133,7 +133,7 @@ class Default extends Component {
                               
                                 
                                   
-                          <HomeCard key={i} img={e.snippet.thumbnails.high.url} vtitle={e.snippet.title} chanName={e.snippet.channelTitle} desc={e.snippet.description}/>
+                              <HomeCard key={i} img={e.snippet.thumbnails.high.url} vtitle={e.snippet.title} chanName={e.snippet.channelTitle} publishedAt={e.snippet.publishedAt}/>
                                   
                                
                                 
