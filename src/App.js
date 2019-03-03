@@ -23,9 +23,9 @@ class App extends Component {
               <Route path='/feedEditorLink' component={FeedEditorLink} />
               <Route path='/Search/:query' exact component={SearchResults} /> */}
               <Route path='/video/:id' exact component={VideoPlayer} />
-              <div>
+              
                 <Default />
-              </div>
+              
             </Switch>
         </>
         </HashRouter>

@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import {
   Container, Row, CardDeck
 } from 'reactstrap';
-import { Link } from 'react-router-dom'
 import './Default.css';
 import Axios from 'axios';
 import ShowMore from '../components/ShowMoreVids';
@@ -62,48 +61,46 @@ class Default extends Component {
       })
   }
 
-  showMoreVideos = () => {
-    const videoCount = 4 * (this.state.feed.showMoreCount + 1);
-    let API_KEY = 'AIzaSyDHLx_IXr--HFvVUuXr31vhUB04SL7ETQY'
-    let SEARCH_QUERY = 'top trending'
-    Axios({
-      method: 'get',
-      url: 'https://www.googleapis.com/youtube/v3/search',
-      params: {
-        part: 'snippet',
-        maxResults: videoCount,
-        videoDefinition: 'high',
-        type: 'video',
-        videoEmbeddable: 'true',
-        key: API_KEY,
-        q: SEARCH_QUERY,
-        pageToken: ''
-      }
-    })
-      .then(res => {
-        // console.log(res.data)
-        console.log('old state: ', this.state)
-        return res.data.items
-      })
-      .then(videoArr => {
-        let videos = [];
-        videos.forEach((e) => {
-          videoArr.push(e.items)
-          return videoArr;
-        });
-        this.setState({
-          search: SEARCH_QUERY.toUpperCase(),
-          videos: videoArr,
-          showMoreCount: this.state.feed.showMoreCount + 1,
-        });
+  // showMoreVideos = () => {
+    
+  //   Axios({
+  //     method: 'get',
+  //     url: 'https://www.googleapis.com/youtube/v3/search',
+  //     params: {
+  //       part: 'snippet',
+  //       maxResults: videoCount,
+  //       videoDefinition: 'high',
+  //       type: 'video',
+  //       videoEmbeddable: 'true',
+  //       key: 'AIzaSyDZqqGk-IjxW7eCupcM4DanttA01Gs8srs',
+  //       q: SEARCH_QUERY,
+  //       pageToken: ''
+  //     }
+  //   })
+  //     .then(res => {
+  //       // console.log(res.data)
+  //       console.log('old state: ', this.state)
+  //       return res.data.items
+  //     })
+  //     .then(videoArr => {
+  //       let videos = [];
+  //       videos.forEach((e) => {
+  //         videoArr.push(e.items)
+  //         return videoArr;
+  //       });
+  //       this.setState({
+  //         search: SEARCH_QUERY.toUpperCase(),
+  //         videos: videoArr,
+  //         showMoreCount: this.state.feed.showMoreCount + 1,
+  //       });
 
-        console.log('new state: ', this.state)
+  //       console.log('new state: ', this.state)
 
-      })
-      .catch(err => {
-        console.log(err)
-      })
-  }
+  //     })
+  //     .catch(err => {
+  //       console.log(err)
+  //     })
+  // }
 
 
   render() {
@@ -131,9 +128,7 @@ class Default extends Component {
                         !this.state.videos ? <div className='loading spinner'></div> : this.state.videos.map((e, i) => {
                           return (
                             <>
-                              <Link to={'/video/'+e.id.videoId} >
-                              <HomeCard key={i} img={e.snippet.thumbnails.high.url} vtitle={e.snippet.title} chanName={e.snippet.channelTitle} publishedAt={e.snippet.publishedAt} />
-                              </Link >
+                              <HomeCard key={i} img={e.snippet.thumbnails.high.url} vtitle={e.snippet.title} chanName={e.snippet.channelTitle} publishedAt={e.snippet.publishedAt} to={'/video/'+e.id.videoId}/>
                             </>
                           )
                         })
