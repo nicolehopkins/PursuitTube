@@ -1,4 +1,7 @@
 import React, { Component } from 'react';
+import {
+  Container, Row, CardDeck
+} from 'reactstrap';
 import './Default.css';
 import Axios from 'axios';
 import ShowMore from '../components/ShowMoreVids';
@@ -15,6 +18,7 @@ class Default extends Component {
             videos: [],
             showMoreCount: 1,
         },
+        img: "https://i.ytimg.com/vi/Wsfia2SmqQM/hqdefault.jpg"
     }
     }
   
@@ -91,13 +95,16 @@ class Default extends Component {
                     videos: videoArr,
                     showMoreCount: this.state.feed.showMoreCount + 1,
             });
+
             console.log('new state: ', this.state)
+            
         })
         .catch(err => {
             console.log(err)
         })
     }
-  
+
+      
     render() {
   
         return (
@@ -114,17 +121,42 @@ class Default extends Component {
               <div>
               <div className='video-list'>
                 <h4>{this.state.search}</h4>
-                <HomeCard />
+
+                    <Container xs="12">
+                      {/* Single Row Start */}
+                      <Row className='rowL'>
+                        <CardDeck className="container" >
+                {
+                        !this.state.videos ? <div className='loading spinner'></div> : this.state.videos.map( (e , i ) => {
+                          return (
+                            <>
+                              
+                                
+                                  
+                              <HomeCard key={i} img={e.snippet.thumbnails.high.url} vtitle={e.snippet.title} chanName={e.snippet.channelTitle} publishedAt={e.snippet.publishedAt}/>
+                                  
+                               
+                                
+                          </>
+                          )
+                        })
+                }
+                        </CardDeck>
+                      </Row>
+                      {/* Single Row End */}
+                    </Container>
+              
+
                 <ShowMore showMoreVideos={this.showMoreVideos}/>
               </div>
               <div className='video-list'>
                 <h4>ESPN Videos</h4>
-                <HomeCard />
+                {/* <HomeCard /> */}
                 <ShowMore showMoreVideos={this.showMoreVideos}/>
               </div>
               <div className='video-list'>
                 <h4>Comedy Videos</h4>
-                <HomeCard />
+                {/* <HomeCard /> */}
                 <ShowMore showMoreVideos={this.showMoreVideos}/>
               </div>
               </div>
