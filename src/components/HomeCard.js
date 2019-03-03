@@ -16,6 +16,7 @@ const HomeCard = (props) => {
                 <CardBody>
                     <CardTitle className='vTitle'>{props.vtitle}</CardTitle>
                     <CardSubtitle className='desc'>{props.chanName}</CardSubtitle>
+                    <br/>
                     <CardSubtitle className='desc'>{props.desc}</CardSubtitle>
                 </CardBody>
             </Card >

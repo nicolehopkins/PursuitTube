@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import {
-  Container, Row, Card, CardImg, CardBody,
-  CardTitle, CardSubtitle, CardDeck
+  Container, Row, CardDeck
 } from 'reactstrap';
 import './Default.css';
 import Axios from 'axios';
@@ -96,11 +95,7 @@ class Default extends Component {
                     videos: videoArr,
                     showMoreCount: this.state.feed.showMoreCount + 1,
             });
-            console.log('Thumbnails',this.getThumbnails())
-          console.log('Desc', this.getDesc())
-          console.log('Title', this.getTitle())
-          console.log('Channel', this.getChanName())
-          console.log('Channel', this.getTime())
+
             console.log('new state: ', this.state)
             
         })
@@ -108,41 +103,6 @@ class Default extends Component {
             console.log(err)
         })
     }
-
-  //   getThumbnails = () => {
-  //     let videoArr = this.state.videos
-  //     videoArr.map((e,i) => {
-  //       console.log('e', e.snippet.thumbnails.high.url, i)
-  //     })
-  //   } 
-
-  // getTitle = () => {
-  //   let videoArr = this.state.videos
-  //   videoArr.map((e, i) => {
-  //     console.log('e', e.snippet.title, i)
-  //   })
-  // }
-
-  // getDesc = () => {
-  //     let videoArr = this.state.videos
-  //     videoArr.map((e, i) => {
-  //       console.log('e', e.snippet.description, i)
-  //     })
-  //   }
-
-  // getChanName = () => {
-  //   let videoArr = this.state.videos
-  //   videoArr.map((e, i) => {
-  //     console.log('e', e.snippet.channelTitle, i)
-  //   })
-  // }
-
-  // getTime = () => {
-  //   let videoArr = this.state.videos
-  //   videoArr.map((e, i) => {
-  //     console.log('e', e.snippet.publishedAt, i)
-  //   })
-  // }
 
       
     render() {
