@@ -4,12 +4,13 @@
 }
 
 .vTitle {
-    font-weight: 650;
-    font-size: 20px;
+    font-weight: 450;
+    font-size: 15px;
 }
 
 .cardCol {
     width: 23%;
+    min-width: 175px;
     padding: 1%;
 }
 

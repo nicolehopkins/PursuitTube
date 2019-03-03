@@ -13,11 +13,10 @@
   
 .video-container {
     display: inline-flex;
-    margin-left: 10%;
 }
   
 .video-list {
-    margin-left: 100px;
+    margin-left: 50px;
 }
   
 .feed-name {

@@ -7,23 +7,28 @@ import Search from './Search'
 class Nav extends Component {
     render() {
         return (
+
             
-
                 <>
-
-
                     <div className="topnav">
                         <div className='link-container'>
-                            <img src="/images/pursuit_logo.jpg" className= "nav-img" alt="Pursuit Logo" width='42' height='42'></img>
-                            <p>Pursuit Tube</p>
-                            <div>
-                                <NavLink to={'/'} className="nav-link"> Home </NavLink>
-                                <NavLink to={'/userlink'} className="nav-link">User</NavLink>
-                                <NavLink to={'/feedEditorLink'} className="nav-link">FeedEditor</NavLink>
-                            </div>
+
+                            <img src="/images/pursuit_logo.jpg" className='imgLogo' alt="Pursuit Logo" width='42' height='42'></img>
+                            <li>Pursuit Tube</li>
+                            <ul>
+                                <li><Link to={'/'} className="nav-link">Home</Link></li> 
+                                {/* removed homelink */}
+                                <li><Link to={'/userlink'} className="nav-link">User</Link></li>
+                                <li><Link to={'/feedEditorLink'} className="nav-link">FeedEditor</Link></li>
+                            </ul>
                         </div>
                     <Search />
                     </div>
+
+                    <Route exact path='/' component={HomeLink} />
+                    <Route path='/userlink' component={UserLink} />
+                    <Route path='/feedEditorLink' component={FeedEditorLink} />
+
                 </>
         );
     }
