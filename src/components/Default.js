@@ -1,4 +1,8 @@
 import React, { Component } from 'react';
+import {
+  Container, Row, Card, CardImg, CardBody,
+  CardTitle, CardSubtitle, CardDeck
+} from 'reactstrap';
 import './Default.css';
 import Axios from 'axios';
 import ShowMore from '../components/ShowMoreVids';
@@ -105,50 +109,42 @@ class Default extends Component {
         })
     }
 
-    getThumbnails = () => {
-      let videoArr = this.state.videos
-      videoArr.map((e,i) => {
-        console.log('e', e.snippet.thumbnails.high.url, i)
-      })
-    } 
+  //   getThumbnails = () => {
+  //     let videoArr = this.state.videos
+  //     videoArr.map((e,i) => {
+  //       console.log('e', e.snippet.thumbnails.high.url, i)
+  //     })
+  //   } 
 
-  getTitle = () => {
-    let videoArr = this.state.videos
-    videoArr.map((e, i) => {
-      console.log('e', e.snippet.title, i)
-    })
-  }
+  // getTitle = () => {
+  //   let videoArr = this.state.videos
+  //   videoArr.map((e, i) => {
+  //     console.log('e', e.snippet.title, i)
+  //   })
+  // }
 
-    getDesc = () => {
-      let videoArr = this.state.videos
-      videoArr.map((e, i) => {
-        console.log('e', e.snippet.description, i)
-      })
-    }
+  // getDesc = () => {
+  //     let videoArr = this.state.videos
+  //     videoArr.map((e, i) => {
+  //       console.log('e', e.snippet.description, i)
+  //     })
+  //   }
 
-  getChanName = () => {
-    let videoArr = this.state.videos
-    videoArr.map((e, i) => {
-      console.log('e', e.snippet.channelTitle, i)
-    })
-  }
+  // getChanName = () => {
+  //   let videoArr = this.state.videos
+  //   videoArr.map((e, i) => {
+  //     console.log('e', e.snippet.channelTitle, i)
+  //   })
+  // }
 
-  getTime = () => {
-    let videoArr = this.state.videos
-    videoArr.map((e, i) => {
-      console.log('e', e.snippet.publishedAt, i)
-    })
-  }
+  // getTime = () => {
+  //   let videoArr = this.state.videos
+  //   videoArr.map((e, i) => {
+  //     console.log('e', e.snippet.publishedAt, i)
+  //   })
+  // }
 
-  buildHomeCard = () => {
-    return (
-      <>
-      <HomeCard img={this.getThumbnails} vtitle={this.getTitle} chanName={this.getChanName} desc={this.getDesc} />
-      </>
-    )
-  }
-    
-  
+      
     render() {
   
         return (
@@ -165,7 +161,32 @@ class Default extends Component {
               <div>
               <div className='video-list'>
                 <h4>{this.state.search}</h4>
-                    <div>{this.buildHomeCard}</div>
+
+                    <Container xs="12">
+                      {/* Single Row Start */}
+                      <Row className='rowL'>
+                        <CardDeck className="container" >
+                {
+                        !this.state.videos ? <div className='loading spinner'></div> : this.state.videos.map( (e , i ) => {
+                          return (
+                            <>
+                              
+                                
+                                  
+                          <HomeCard key={i} img={e.snippet.thumbnails.high.url} vtitle={e.snippet.title} chanName={e.snippet.channelTitle} desc={e.snippet.description}/>
+                                  
+                               
+                                
+                          </>
+                          )
+                        })
+                }
+                        </CardDeck>
+                      </Row>
+                      {/* Single Row End */}
+                    </Container>
+              
+
                 <ShowMore showMoreVideos={this.showMoreVideos}/>
               </div>
               <div className='video-list'>
