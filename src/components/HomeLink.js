@@ -1,13 +1,12 @@
-import React, { Component } from 'react';
+import React from 'react';
 
-class HomeLink extends Component {
-  render() {
+const HomeLink = () => {
     return (
         <div>
-          <h2>Home</h2>
+            <h2>Home</h2>
         </div>
-    );
-  }
+    )
 }
 
 export default HomeLink;
+

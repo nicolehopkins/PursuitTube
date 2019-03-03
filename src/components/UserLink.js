@@ -1,13 +1,11 @@
-import React, { Component } from 'react';
+import React from 'react';
 
-class UserLink extends Component {
-  render() {
+const UserLink = () => {
     return (
         <div>
-          <h2>User</h2>
+            <h2>User</h2>
         </div>
-    );
-  }
+    )
 }
 
 export default UserLink;

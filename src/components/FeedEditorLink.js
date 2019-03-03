@@ -1,13 +1,11 @@
-import React, { Component } from 'react';
+import React from 'react';
 
-class FeedEditorLink extends Component {
-  render() {
+const FeedEditorLink = () => {
     return (
         <div>
-          <h2>FeedEditor</h2>
+            <h2>FeedEditor</h2>
         </div>
-    );
-  }
+    )
 }
 
 export default FeedEditorLink;

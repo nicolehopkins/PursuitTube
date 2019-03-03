@@ -5,13 +5,13 @@ ul {
     color: grey;
   }
 
-  li {
+  .nav-link  {
     display: inline;
     /* display: block; */
     padding: 8px;
     /* color: #1a0dab; */
     text-decoration: none;
-
+    
     
   }
 
@@ -55,8 +55,11 @@ input {
     align-items: center;
 }
 
+p {
+    padding: 8px;
+}
 
 
-li:hover {font-size:150%; color: black;}
+a:hover {font-size:150%; color: black;}
 
 
